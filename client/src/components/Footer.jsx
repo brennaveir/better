@@ -3,15 +3,15 @@ import Nav from 'react-bootstrap/Nav';
 
 function Footer() {
   return (
-    <Nav className='fixed-bottom' defaultActiveKey="/home" as="ul">
+    <Nav className='fixed-bottom d-flex justify-content-center' defaultActiveKey="/home" as="ul">
       <Nav.Item as="li">
-        <Nav.Link href="/home">Active</Nav.Link>
+        <Nav.Link href="https://github.com/brennaveir">Github</Nav.Link>
       </Nav.Item>
       <Nav.Item as="li">
-        <Nav.Link eventKey="link-1">Link</Nav.Link>
+        <Nav.Link href="https://brennaveir.github.io/Devfolio/">Portfolio</Nav.Link>
       </Nav.Item>
       <Nav.Item as="li">
-        <Nav.Link eventKey="link-2">Link</Nav.Link>
+        <Nav.Link href="mailto:brennaveir@gmail.com">Email</Nav.Link>
       </Nav.Item>
     </Nav>
   );
