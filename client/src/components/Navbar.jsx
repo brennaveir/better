@@ -4,7 +4,8 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+// import NavDropdown from 'react-bootstrap/NavDropdown';
+import Auth from '../utils/auth.js';
 
 
 function Navigation() {
@@ -19,12 +20,23 @@ function Navigation() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#Feed">Feed</Nav.Link>
-            <Nav.Link href="#Inbox">Inbox</Nav.Link>
-            <Nav.Link href="#Inbox">Profile</Nav.Link>
-            <Nav.Link href="#" disabled>
-             Username
+           
+            <Nav.Link href="/Feed">Feed</Nav.Link>
+            <Nav.Link href="/Inbox">Inbox</Nav.Link>
+            <Nav.Link href="/Profile">Profile</Nav.Link>
+            {Auth.loggedIn() ? (
+              <>
+              <Button className="my-button">Login</Button>
+              </>
+              ) : (
+                <>
+                <Nav.Link href="#" disabled>
+            {Auth.getProfile().data.username}'s profile
             </Nav.Link>
+                <Button className="my-button">Login</Button>
+                </>
+              )}
+            
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -33,6 +45,8 @@ function Navigation() {
               className="me-2"
               aria-label="Search"
             />
+            
+            
             <Button className="my-button">Search</Button>
           </Form>
         </Navbar.Collapse>
