@@ -6,7 +6,7 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
-    bitss: [Bit]!
+    bits: [Bit]!
   }
 
   type Bit {
