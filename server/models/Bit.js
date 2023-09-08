@@ -1,7 +1,6 @@
-const { Schema } = require('mongoose');
+const { Schema, model } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
-// This is a subdocument schema, it won't become its own model but we'll use it as the schema for the User's `bits` array in User.js
 const bitSchema = new Schema({
   bitText: {
     type: String,
@@ -41,4 +40,6 @@ const bitSchema = new Schema({
   ],
 });
 
-module.exports = bitSchema;
+const Bit = model('Bit', bitSchema);
+
+module.exports = Bit;
