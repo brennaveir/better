@@ -48,7 +48,7 @@ const resolvers = {
 
       return { token, user };
     },
-    addbit: async (parent, { bitText }, context) => {
+    addBit: async (parent, { bitText }, context) => {
       if (context.user) {
         const bit = await Bit.create({
           bitText,
