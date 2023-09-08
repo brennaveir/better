@@ -13,6 +13,7 @@ import Navigation from './components/Navbar.jsx';
 import Feed from './pages/Feed.jsx';
 import Profile from './pages/Profile.jsx';
 import Login from './components/Login';
+import SignUp from './components/SignUp.jsx';
 import Footer from './components/Footer.jsx';
 
 
@@ -49,15 +50,19 @@ function App() {
             <Route 
               path="/" 
               element={<Feed/>} 
-            />
+            /> 
             <Route 
-              path="/saved" 
+              path="/profile" 
               element={<Profile/>} 
-            />
-            <Route 
+            /> 
+             <Route 
               path="/login" 
               element={<Login/>} 
             />
+            <Route 
+                path="/signup" 
+                element={<SignUp />}
+              />
             <Route 
               path='*' 
               element={<h1 className="display-2">Wrong page!</h1>}

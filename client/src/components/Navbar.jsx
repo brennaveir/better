@@ -21,10 +21,10 @@ function Navigation() {
             navbarScroll
           >
            
-            <Nav.Link href="/Feed">Feed</Nav.Link>
+            <Nav.Link href="/">Feed</Nav.Link>
             <Nav.Link href="/Inbox">Inbox</Nav.Link>
             <Nav.Link href="/Profile">Profile</Nav.Link>
-            {Auth.loggedIn() ? (
+            {/* {Auth.loggedIn() ? (
               <>
               <Button className="my-button">Login</Button>
               </>
@@ -35,7 +35,7 @@ function Navigation() {
             </Nav.Link>
                 <Button className="my-button">Login</Button>
                 </>
-              )}
+              )} */}
             
           </Nav>
           <Form className="d-flex">
