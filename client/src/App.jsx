@@ -12,8 +12,8 @@ import { setContext } from '@apollo/client/link/context';
 import Navigation from './components/Navbar.jsx';
 import Feed from './pages/Feed.jsx';
 import Profile from './pages/Profile.jsx';
-import Login from './components/Login.jsx';
-import SignUp from './components/SignUp.jsx';
+import Login from './pages/Login.jsx';
+import SignUp from './pages/SignUp.jsx';
 import Footer from './components/Footer.jsx';
 
 
