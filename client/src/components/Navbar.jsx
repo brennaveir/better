@@ -26,13 +26,12 @@ function Navigation() {
           >
            
             <Nav.Link href="/">Feed</Nav.Link>
-            <Nav.Link href="/Inbox">Inbox</Nav.Link>
-            <Nav.Link href="/Profile">Profile</Nav.Link>
-            <div>
+            {/* <Nav.Link href="/Inbox">Inbox</Nav.Link> */}
+            <Nav.Link href="/profile">Profile</Nav.Link>
             {Auth.loggedIn() ? (
             <>
               <Nav.Link className="btn btn-lg btn-info m-2" to="/me">
-                {Auth.getProfile().data.username}'s profile
+                {Auth.getProfile().data.username}
               </Nav.Link>
               <Nav.Link onClick={logout}>
                 Logout
@@ -40,15 +39,14 @@ function Navigation() {
             </>
           ) : (
             <>
-              <Nav.Link to="/login">
+              <Nav.Link href="/login">
                 Login
               </Nav.Link>
-              <Nav.Link  to="/signup">
+              <Nav.Link  href="/signup">
                 Signup
               </Nav.Link>
             </>
           )}
-            </div>
           </Nav>
           <Form className="d-flex">
             <Form.Control
