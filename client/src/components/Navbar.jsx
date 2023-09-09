@@ -9,6 +9,10 @@ import Auth from '../utils/auth.js';
 
 
 function Navigation() {
+  const logout = (event) => {
+    event.preventDefault();
+    Auth.logout();
+  };
   return (
     <Navbar expand="lg" className="navbar bg-body-tertiary fixed-top">
       <Container fluid>
@@ -24,19 +28,27 @@ function Navigation() {
             <Nav.Link href="/">Feed</Nav.Link>
             <Nav.Link href="/Inbox">Inbox</Nav.Link>
             <Nav.Link href="/Profile">Profile</Nav.Link>
-            {/* {Auth.loggedIn() ? (
-              <>
-              <Button className="my-button">Login</Button>
-              </>
-              ) : (
-                <>
-                <Nav.Link href="#" disabled>
-            {Auth.getProfile().data.username}'s profile
-            </Nav.Link>
-                <Button className="my-button">Login</Button>
-                </>
-              )} */}
-            
+            <div>
+            {Auth.loggedIn() ? (
+            <>
+              <Nav.Link className="btn btn-lg btn-info m-2" to="/me">
+                {Auth.getProfile().data.username}'s profile
+              </Nav.Link>
+              <Nav.Link onClick={logout}>
+                Logout
+              </Nav.Link>
+            </>
+          ) : (
+            <>
+              <Nav.Link to="/login">
+                Login
+              </Nav.Link>
+              <Nav.Link  to="/signup">
+                Signup
+              </Nav.Link>
+            </>
+          )}
+            </div>
           </Nav>
           <Form className="d-flex">
             <Form.Control
