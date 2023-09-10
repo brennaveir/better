@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 
 function Login() {
   return (
-    <div>
+    <>
     <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
@@ -21,7 +21,7 @@ function Login() {
         Login
       </Button>
     </Form>
-    </div>
+    </>
   );
 }
 
