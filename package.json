@@ -1,7 +1,7 @@
 {
     "name": "better",
     "version": "1.0.0",
-    "description": "2048x2",
+    "description": "A better version of a well known app",
     "main": "server/server.js",
     "scripts": {
       "start": "node server/server.js --ignore client",
