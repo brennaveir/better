@@ -27,8 +27,9 @@ function Login(props) {
     try {
       const { data } = await login({
         variables: { ...formState },
+      
       });
-
+console.log(data)
       Auth.login(data.login.token);
       
     } catch (e) {
@@ -50,7 +51,8 @@ function Login(props) {
               </p>
             ) : (
     <Form 
-    onSubmit={handleFormSubmit}> 
+    onSubmit={handleFormSubmit}
+    > 
       <Form.Group 
       className="mb-3" 
       

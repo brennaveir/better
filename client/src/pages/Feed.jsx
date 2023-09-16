@@ -25,7 +25,7 @@ const Feed = () => {
           ) : (
             <Bits
               bits={bits}
-
+              title="some bits...."
             />
           )}
         </div>

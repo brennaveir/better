@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
+
 const Bits = ({
   bits,
-  showUsername = true,
- 
+  title,
+ showUsername = true,
+ showTitle= true
 }) => {
   if (!bits.length) {
     return <h3>No Bits Yet</h3>;
@@ -12,6 +15,7 @@ const Bits = ({
 
   return (
     <div>
+      {showTitle && <h3>{title}</h3>}
       {bits &&
         bits.map((bit) => (
           <div key={bit._id} className="card mb-3">
