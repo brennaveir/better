@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
-
 import { ADD_BIT } from '../utils/mutations';
 import { QUERY_BITS, QUERY_ME } from '../utils/queries';
 import Form from 'react-bootstrap/Form';
-
+import Button from 'react-bootstrap/Button';
 import Auth from '../utils/auth';
 
 function AddBit() {
@@ -31,7 +30,7 @@ function AddBit() {
         const { me } = cache.readQuery({ query: QUERY_ME });
         cache.writeQuery({
           query: QUERY_ME,
-          data: { me: { ...me, bits: [...me.bits, addbit] } },
+          data: { me: { ...me, bits: [...me.bits, addBit] } },
         });
       },
     });
@@ -48,6 +47,7 @@ function AddBit() {
         });
   
         setBitText('');
+        // window.location.assign('/')
       } catch (err) {
         console.error(err);
       }
@@ -61,6 +61,10 @@ function AddBit() {
         setCharacterCount(value.length);
       }
     };
+
+    const refreshPage = () => { 
+        window.location.reload(); 
+    }
   return (
     <div>
     {Auth.loggedIn() ? (
@@ -76,8 +80,25 @@ function AddBit() {
        <Form onSubmit={handleFormSubmit}>
       <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
         <Form.Label>Post a bit!</Form.Label>
-        <Form.Control as="textarea" rows={3} />
+        <Form.Control
+        name="bitText"
+        placeholder="Here's a new bit..."
+        as="textarea" 
+        rows={3}
+        value={bitText}
+        onChange={handleChange} 
+/>
       </Form.Group>
+      <div className="mb-2">
+        <Button 
+        variant="primary" 
+        size="lg"
+        type="submit"
+        onClick={refreshPage}
+        >
+          Post
+        </Button>{' '}
+        </div>
     </Form> 
     </>
     ) : (
