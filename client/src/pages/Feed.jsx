@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 
 import Bits from '../components/Bits';
-// import AddBit from '../components/AddBit';
+import AddBit from '../components/AddBit';
 
 import { QUERY_BITS } from '../utils/queries';
 
@@ -17,7 +17,7 @@ const Feed = () => {
           className="col-12 col-md-10 mb-3 p-3"
           style={{ border: '1px dotted #1a1a1a' }}
         >
-          {/* <AddBit /> */}
+          <AddBit />
         </div>
         <div className="col-12 col-md-8 mb-3">
           {loading ? (
