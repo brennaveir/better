@@ -15,6 +15,7 @@ import Profile from './pages/Profile.jsx';
 import Login from './pages/Login.jsx';
 import SignUp from './pages/SignUp.jsx';
 import Footer from './components/Footer.jsx';
+import Sidebar from './components/Sidebar.jsx'
 
 
 const httpLink = createHttpLink({
@@ -45,8 +46,12 @@ function App() {
       <Router>
     <div className='flex-column justify-flex-start min-100-vh'>
           <Navigation />
+          <div className='container p-5 m-5'><Sidebar />
+           
+           
           <div className= 'container m-5 p-5'>
-          <Routes>
+          
+          <Routes className='flex-row justify-flex-center'>
             <Route 
               path="/" 
               element={<Feed/>} 
@@ -71,6 +76,7 @@ function App() {
         </div>
         <Footer />
         </div>
+      </div>
       </Router>
     </ApolloProvider>
   );

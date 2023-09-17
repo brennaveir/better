@@ -27,13 +27,13 @@ const Bits = ({
                 >
                   {bit.bitAuthor} <br />
                   <span style={{ fontSize: '1rem' }}>
-                    had this bit on {bit.createdAt}
+                    posted this bit on {bit.createdAt}
                   </span>
                 </Link>
               ) : (
                 <>
                   <span style={{ fontSize: '1rem' }}>
-                    You had this bit on {bit.createdAt}
+                    You posted this bit on {bit.createdAt}
                   </span>
                 </>
               )}
