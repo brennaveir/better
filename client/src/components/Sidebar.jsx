@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
-function Sidebar() {
+function SideBar() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -27,4 +27,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar;
+export default SideBar;

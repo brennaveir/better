@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 import Auth from '../utils/auth.js';
@@ -27,29 +28,31 @@ function Navigation() {
           >
            
             <Nav.Link href="/">Feed</Nav.Link>
+            </Nav>
             {/* <Nav.Link href="/Inbox">Inbox</Nav.Link> */}
-            <Nav.Link href="/profile">Profile</Nav.Link>
             {Auth.loggedIn() ? (
             <>
-              <Nav.Link className="btn btn-lg btn-info m-2" to="/me">
+              <Link className="m-2" to="/profile">
                 {Auth.getProfile().data.username}
-              </Nav.Link>
-              <Nav.Link onClick={logout}>
+              </Link>
+              <Button onClick={logout}>
                 Logout
-              </Nav.Link>
+              </Button>
+              
             </>
           ) : (
             <>
-              <Nav.Link href="/login">
+              <Button href="/login">
                 Login
-              </Nav.Link>
-              <Nav.Link  href="/signup">
+              </Button>
+              <Button  href="/signup">
                 Signup
-              </Nav.Link>
+              </Button>
             </>
           )}
-          </Nav>
-          <Form className="d-flex">
+          {/* </Nav> */}
+
+          {/* <Form className="d-flex">
             <Form.Control
               type="search"
               placeholder="Search"
@@ -59,7 +62,7 @@ function Navigation() {
             
             
             <Button className="my-button">Search</Button>
-          </Form>
+          </Form> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>

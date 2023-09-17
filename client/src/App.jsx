@@ -46,7 +46,7 @@ function App() {
       <Router>
     <div className='flex-column justify-flex-start min-100-vh'>
           <Navigation />
-          <div className='container p-5 m-5'><Sidebar />
+          <div className="flex-row justify-content-start"><Sidebar />
            
            
           <div className= 'container m-5 p-5'>
