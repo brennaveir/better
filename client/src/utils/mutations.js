@@ -54,3 +54,13 @@ export const ADD_COMMENT = gql`
     }
   }
 `;
+
+export const REMOVE_BIT = gql`
+  mutation removeBit($bitId: ID!) {
+    removeBit(bitId: $bitId) {
+      _id
+      username
+      email
+    }
+  }
+`;

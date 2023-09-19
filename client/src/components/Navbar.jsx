@@ -35,6 +35,7 @@ function Navigation() {
               <Link className="m-2" to="/profile">
                 {Auth.getProfile().data.username}
               </Link>
+              
               <Button onClick={logout}>
                 Logout
               </Button>

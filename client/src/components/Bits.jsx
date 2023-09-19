@@ -12,6 +12,7 @@ const Bits = ({
   if (!bits.length) {
     return <h3>No Bits Yet</h3>;
   }
+  
 
   return (
     <div>

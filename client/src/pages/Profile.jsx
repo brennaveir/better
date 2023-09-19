@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
@@ -6,6 +7,8 @@ import AddBit from '../components/AddBit';
 import Bits from '../components/Bits';
 
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
+
+
 
 import Auth from '../utils/auth';
 
@@ -35,6 +38,7 @@ const Profile = () => {
     );
   }
 
+
   return (
     <div>
       <div className="flex-row justify-center mb-3">
@@ -48,6 +52,7 @@ const Profile = () => {
             title={`${user.username}'s bits...`}
             showTitle={false}
             showUsername={false}
+            
           />
         </div>
         {!userParam && (
