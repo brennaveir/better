@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col';
 import Bits from '../components/Bits';
 import AddBit from '../components/AddBit';
 import Sidebar from '../components/Sidebar';
+import Navigation from '../components/Navbar';
 
 import { QUERY_BITS } from '../utils/queries';
 
@@ -21,8 +22,8 @@ const Feed = () => {
         <Col></Col>
       </Row>
       <Row>
-       <Col xs>Second, but last</Col>
-       <Col xs={6}><AddBit />
+       <Col xs><Navigation /></Col>
+       <Col xs={5}><AddBit />
        <Bits
               bits={bits}
               title="some bits...."

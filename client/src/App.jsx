@@ -45,12 +45,11 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-    <div className='flex-column justify-flex-start min-100-vh'>
-          <Navigation />
-          <div className="flex-row justify-content-start">
+    
+          
            
            
-          <div className= 'container m-5 p-5'>
+          
           
           <Routes className='flex-row justify-flex-center'>
             <Route 
@@ -82,10 +81,10 @@ function App() {
               element={<h1 className="display-2">Wrong page!</h1>}
             />
           </Routes>
-        </div>
+      
         <Footer />
-        </div>
-      </div>
+        
+      
       </Router>
     </ApolloProvider>
   );
