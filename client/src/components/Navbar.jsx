@@ -53,17 +53,7 @@ function Navigation() {
           )}
           {/* </Nav> */}
 
-          {/* <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            
-            
-            <Button className="my-button">Search</Button>
-          </Form> */}
+          
         </Navbar.Collapse>
       </Container>
     </Navbar>
