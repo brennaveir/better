@@ -16,6 +16,7 @@ import Login from './pages/Login.jsx';
 import SignUp from './pages/SignUp.jsx';
 import Footer from './components/Footer.jsx';
 import Sidebar from './components/Sidebar.jsx'
+import SingleBit from './pages/SingleBit.jsx'
 
 
 const httpLink = createHttpLink({
@@ -67,6 +68,14 @@ function App() {
             <Route 
                 path="/signup" 
                 element={<SignUp />}
+              />
+               <Route 
+                path="/profiles/:username" 
+                element={<Profile />}
+              />
+               <Route 
+                path="/bits/:bitId" 
+                element={<SingleBit />}
               />
             <Route 
               path='*' 
