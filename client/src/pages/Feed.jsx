@@ -17,18 +17,17 @@ const Feed = () => {
   const bits = data?.bits || [];
 
   return (
-    <Container fluid="lg">
+    <Container>
       <Row>
-        <Col></Col>
-      </Row>
-      <Row>
-       <Col xs><Navigation /></Col>
-       <Col xs={5}><AddBit />
+       <Col><Navigation /></Col>
+       <Col xs={6}>
+        <AddBit />
        <Bits
               bits={bits}
               title="some bits...."
-            /></Col>
-        <Col xs><Sidebar /></Col>
+            />
+            </Col>
+        <Col><Sidebar /></Col>
       </Row>
     </Container>
     // <main>

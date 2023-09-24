@@ -16,7 +16,7 @@ const Bits = ({
 
   return (
      
-      <Card style={{ width: '18rem' }}>
+      <Card style={{ width: '40rem' }}>
          {showTitle && <h3>{title}</h3>}
     {bits &&
     bits.map((bit) => (

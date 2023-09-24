@@ -19,7 +19,7 @@ function Navigation() {
   };
   return (
     <Card style={{ width: '18rem' }}>
-      <ListGroup variant="flush">
+      <ListGroup >
         <ListGroup.Item>
           <Link to="#">Better</Link>
         </ListGroup.Item>
