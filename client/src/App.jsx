@@ -8,6 +8,10 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 
 import Navigation from './components/Navbar.jsx';
 import Feed from './pages/Feed.jsx';
@@ -43,50 +47,57 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <ApolloProvider client={client}>
-      <Router>
-    
-          
-           
-           
-          
-          
-          <Routes className='flex-row justify-flex-center'>
-            <Route 
-              path="/" 
-              element={<Feed/>} 
-            /> 
-            <Route 
-              path="/profile" 
-              element={<Profile/>} 
-            /> 
-             <Route 
-              path="/login" 
-              element={<Login/>} 
-            />
-            <Route 
-                path="/signup" 
-                element={<SignUp />}
-              />
-               <Route 
-                path="/profiles/:username" 
-                element={<Profile />}
-              />
-               <Route 
-                path="/bits/:bitId" 
-                element={<SingleBit />}
-              />
-            <Route 
-              path='*' 
-              element={<h1 className="display-2">Wrong page!</h1>}
-            />
-          </Routes>
-      
-        <Footer />
-        
-      
-      </Router>
-    </ApolloProvider>
+    <>
+      <Container className="bg-info" fluid>
+        <Row>
+          <Col className= "m-5">
+            <ApolloProvider client={client}>
+              <Router>
+                <Routes className='flex-row justify-flex-center'>
+                  <Route
+                    path="/"
+                    element={<Feed />}
+                  />
+                  <Route
+                    path="/profile"
+                    element={<Profile />}
+                  />
+                  <Route
+                    path="/login"
+                    element={<Login />}
+                  />
+                  <Route
+                    path="/signup"
+                    element={<SignUp />}
+                  />
+                  <Route
+                    path="/profiles/:username"
+                    element={<Profile />}
+                  />
+                  <Route
+                    path="/bits/:bitId"
+                    element={<SingleBit />}
+                  />
+                  <Route
+                    path='*'
+                    element={<h1 className="display-2">Wrong page!</h1>}
+                  />
+
+                </Routes>
+
+
+
+
+                <Footer />
+
+
+              </Router>
+
+            </ApolloProvider>
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 }
 
