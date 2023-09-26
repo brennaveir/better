@@ -18,7 +18,7 @@ function Navigation() {
     Auth.logout();
   };
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card>
       <ListGroup >
         <ListGroup.Item>
           <Link to="#">Better</Link>

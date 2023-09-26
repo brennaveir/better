@@ -347,3 +347,16 @@ END NORMALIZE CSS
   background-color:pink
 }
 
+.card {
+  border-color: black;
+  
+}
+
+.bit-form {
+  border-color:black;
+  border-radius: 5px;
+  margin-bottom:5px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 5px;
+}

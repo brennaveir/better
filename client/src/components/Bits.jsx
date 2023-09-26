@@ -15,12 +15,11 @@ const Bits = ({
   
 
   return (
-     
-      <Card style={{ width: '40rem' }}>
+   <Card>
          {showTitle && <h3>{title}</h3>}
     {bits &&
     bits.map((bit) => (
-    <Card.Body key={bit.id}> 
+    <Card.Body className="" key={bit.id}> 
       {showUsername ? (
 <Card.Title>
         <Link to={`/profiles/${bit.bitAuthor}`}>{bit.bitAuthor}</Link>
@@ -41,7 +40,6 @@ const Bits = ({
     </Card.Body>
   ))}
   </Card>
-    
     
     
   )

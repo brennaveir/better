@@ -66,7 +66,7 @@ function AddBit() {
         window.location.reload(); 
     }
   return (
-    <div>
+    <div className="bit-form">
     {Auth.loggedIn() ? (
         <>
         

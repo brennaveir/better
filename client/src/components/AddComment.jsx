@@ -41,7 +41,7 @@ const AddComment = ({ bitId }) => {
 
   return (
     <div>
-      <h4>What are your bits on this bit?</h4>
+      <h4>Post a bit about this bit...</h4>
 
       {Auth.loggedIn() ? (
         <>

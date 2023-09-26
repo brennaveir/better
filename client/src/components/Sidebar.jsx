@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 
 function Sidebar() {
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card>
       <ListGroup>
         <Form className="d-flex">
             <Form.Control
