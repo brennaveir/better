@@ -88,7 +88,7 @@ function App() {
 
 
 
-                <Footer />
+                
 
 
               </Router>
@@ -97,6 +97,7 @@ function App() {
           </Col>
         </Row>
       </Container>
+      <Footer />
     </>
   );
 }
