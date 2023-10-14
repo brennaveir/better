@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
@@ -41,14 +43,18 @@ function Signup() {
     }
   };
   return (
+    <Container className="signup-container">
+<Row>
+<Col>Better</Col>
+<Col>
+    
     <Form 
     onSubmit={handleFormSubmit}
     >
       <Form.Group 
       className="mb-3" 
       controlId="email"
-     
-      >
+     >
         <Form.Label>Email address</Form.Label>
         <Form.Control 
         type="email" 
@@ -85,6 +91,9 @@ function Signup() {
         Signup
       </Button>
     </Form>
+</Col>
+</Row>
+    </Container>
   );
 }
 

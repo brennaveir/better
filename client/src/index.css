@@ -369,3 +369,7 @@ END NORMALIZE CSS
 .login-container {
   min-height: 85vh;
 }
+
+.signup-container {
+  min-height: 85vh;
+}
