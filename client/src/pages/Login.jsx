@@ -92,6 +92,10 @@ console.log(data)
       <Button variant="primary" type="submit">
         Login
       </Button>
+      <Form.Text className="text-muted m-3">
+          Don't have an account yet?
+          <Link to="/signup" className="m-1">Sign up</Link>
+        </Form.Text>
     </Form>
     </Col>  
     </Row>
