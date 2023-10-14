@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Image from 'react-bootstrap/Image';
 
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
@@ -45,7 +46,9 @@ function Signup() {
   return (
     <Container className="signup-container">
 <Row>
-<Col>Better</Col>
+<Col>
+<Image src="../public/betterLogo.png" />
+</Col>
 <Col>
     
     <Form 

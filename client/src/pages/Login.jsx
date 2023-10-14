@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
@@ -55,7 +56,9 @@ console.log(data)
             ) : (
             <Container className="login-container">
 <Row>
-<Col>Better</Col>
+<Col>
+<Image src="../public/betterLogo.png" />
+</Col>
 
       <Col>    
     <Form onSubmit={handleFormSubmit}> 

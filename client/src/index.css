@@ -373,3 +373,7 @@ END NORMALIZE CSS
 .signup-container {
   min-height: 85vh;
 }
+
+a {
+  text-decoration: none;
+}
