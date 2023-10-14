@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 
 function Footer() {
   return (
-    <Nav className='d-flex justify-content-center bg-white' defaultActiveKey="/home" as="ul">
+    <Nav className='footer d-flex justify-content-center bg-white' defaultActiveKey="/home" as="ul">
       <Nav.Item as="li">
         <Nav.Link href="https://github.com/brennaveir">Github</Nav.Link>
       </Nav.Item>

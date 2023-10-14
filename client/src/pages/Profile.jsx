@@ -11,7 +11,7 @@ import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
 
 import Auth from '../utils/auth';
-
+//!!!!!!!!!!!!!!!!!Need to change so username shows up on
 const Profile = () => {
   const { username: userParam } = useParams();
 
@@ -51,7 +51,7 @@ const Profile = () => {
             bits={user.bits}
             title={`${user.username}'s bits...`}
             showTitle={false}
-            showUsername={false}
+            showUsername={true}
             
           />
         </div>

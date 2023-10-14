@@ -30,27 +30,6 @@ const Feed = () => {
         <Col><Sidebar /></Col>
       </Row>
     </Container>
-    // <main>
-    //   <div className="flex-row justify-center">
-    //     <div
-    //       className="col-12 col-md-10 mb-3 p-3"
-    //       style={{ border: '1px dotted #1a1a1a' }}
-    //     >
-    //       <AddBit />
-    //     </div>
-    //     <div className="col-12 col-md-8 mb-3">
-    //       {loading ? (
-    //         <div>Loading...</div>
-    //       ) : (
-    //         <Bits
-    //           bits={bits}
-    //           title="some bits...."
-    //         />
-    //       )}
-    //     </div>
-    //   </div>
-    // </main>
-
   );
 };
 

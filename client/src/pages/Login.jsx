@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
@@ -50,13 +53,13 @@ console.log(data)
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-    <Form 
-    onSubmit={handleFormSubmit}
-    > 
-      <Form.Group 
-      className="mb-3" 
-      
-      >
+            <Container className="login-container">
+<Row>
+<Col>Better</Col>
+
+      <Col>    
+    <Form onSubmit={handleFormSubmit}> 
+      <Form.Group className="mb-3" >
         <Form.Label>Email address</Form.Label>
         <Form.Control 
         name="email" 
@@ -71,8 +74,7 @@ console.log(data)
           We will never share your email with anyone else.
         </Form.Text>
       </Form.Group>
-
-      <Form.Group className="mb-3" >
+<Form.Group className="mb-3" >
         <Form.Label>Password</Form.Label>
         <Form.Control 
         name="password"
@@ -88,6 +90,9 @@ console.log(data)
         Login
       </Button>
     </Form>
+    </Col>  
+    </Row>
+    </Container>
       )}
       {error && (
               <div className="my-3 p-3 bg-danger text-white">

@@ -343,6 +343,11 @@ END NORMALIZE CSS
 =================
 */
 
+
+.root-div {
+  min-height: 100vh;
+}
+
 .btn {
   background-color:pink
 }
@@ -359,4 +364,8 @@ END NORMALIZE CSS
   background-color: white;
   border: 1px solid black;
   padding: 5px;
+}
+
+.login-container {
+  min-height: 85vh;
 }

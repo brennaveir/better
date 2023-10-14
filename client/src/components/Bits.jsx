@@ -17,7 +17,7 @@ const Bits = ({ bits, title, showUsername = true, showTitle = true}) => {
     bits.map((bit) => (
     <Card key={bit.id}>
     <Card.Body > 
-      {showUsername ? (
+     {showUsername ? ( 
 <Card.Title >
   
         <Link to={`/profiles/${bit.bitAuthor}`}>{bit.bitAuthor}</Link>
