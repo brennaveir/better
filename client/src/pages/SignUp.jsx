@@ -90,6 +90,10 @@ function Signup() {
       <Button variant="primary" type="submit">
         Signup
       </Button>
+      <Form.Text className="text-muted m-3">
+          Already have an account?
+          <Link to="/login" className="m-1">Login</Link>
+        </Form.Text>
     </Form>
 </Col>
 </Row>

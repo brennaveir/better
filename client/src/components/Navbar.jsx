@@ -27,7 +27,7 @@ function Navigation() {
           <Link to="/">Feed</Link>
         </ListGroup.Item>
         
-          {Auth.loggedIn() ? (
+          
             <>
               <ListGroup.Item>
               <Link to="/profile">Profile</Link>
@@ -38,16 +38,7 @@ function Navigation() {
               </Button>
               </ListGroup.Item>
             </>
-          ) : (
-            <>
-              <Link className="btn btn-lg btn-info m-2" to="/login">
-                Login
-              </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
-                Signup
-              </Link>
-            </>
-          )}
+         
 
         
       </ListGroup>
