@@ -22,7 +22,7 @@ function Navigation() {
     <Card>
       <ListGroup >
         <ListGroup.Item>
-          <Link to="#"><Image src="../public/betterWithoutTagline.png" /></Link>
+          <Link to="#"><Image src="/betterWithoutTagline.png" /></Link>
         </ListGroup.Item>
         <ListGroup.Item>
           <Link to="/">Feed</Link>
@@ -34,7 +34,7 @@ function Navigation() {
               <Link to="/profile">Inbox</Link>
                </ListGroup.Item>
               <ListGroup.Item>
-              <Link to="/profile">Friends</Link>
+              <Link to="/profile">Buddies</Link>
               </ListGroup.Item>
             <ListGroup.Item>
               <Button onClick={logout}>

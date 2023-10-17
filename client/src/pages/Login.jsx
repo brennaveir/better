@@ -57,7 +57,7 @@ console.log(data)
             <Container className="login-container">
 <Row>
 <Col>
-<Image src="../public/betterLogo.png" />
+<Image src="/betterLogo.png" />
 </Col>
 
       <Col>    

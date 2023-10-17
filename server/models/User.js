@@ -25,6 +25,12 @@ const userSchema = new Schema({
       ref: 'Bit',
     },
   ],
+  buddies: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'User',
+    },
+  ],
 });
 
 userSchema.pre('save', async function (next) {

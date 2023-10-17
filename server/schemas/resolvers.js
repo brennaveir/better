@@ -1,6 +1,8 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Bit } = require('../models');
 const { signToken } = require('../utils/auth');
+const { UserInputError, ApolloError } = require('apollo-server-express'); // Import Apollo Server error types
+const mongoose = require('mongoose'); // Import Mongoose
 
 const resolvers = {
   Query: {
@@ -20,6 +22,12 @@ const resolvers = {
     me: async (parent, args, context) => {
       if (context.user) {
         return User.findOne({ _id: context.user._id }).populate('bits');
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+    buddies: async (parent, args, context) => {
+      if (context.user) {
+        return User.find({ _id: context.user._id }).populate('buddies');
       }
       throw new AuthenticationError('You need to be logged in!');
     },
@@ -81,6 +89,38 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+    addBuddy: async (parent, { userId }, context) => {
+      if (context.user) {
+        try {
+          // Ensure userId is a valid ObjectId
+          const isValidObjectId = mongoose.Types.ObjectId.isValid(userId);
+          if (!isValidObjectId) {
+            throw new UserInputError('Invalid user ID');
+          }
+    
+          const updatedUser = await User.findOneAndUpdate(
+            { _id: context.user._id },
+            {
+              $addToSet: {
+                buddies: userId
+              },
+            },
+            {
+              new: true,
+            }
+          ).populate('buddies')
+    
+          return updatedUser;
+        } catch (error) {
+          // Handle any errors that occurred during the update
+          // You can log the error or return an appropriate response
+          throw new ApolloError('An error occurred while adding a buddy');
+        }
+      } else {
+        throw new AuthenticationError('You need to be logged in!');
+      }
+    },
+    
     removeBit: async (parent, { bitId }, context) => {
       if (context.user) {
         const bit = await Bit.findOneAndDelete({

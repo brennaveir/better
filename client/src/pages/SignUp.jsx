@@ -47,7 +47,7 @@ function Signup() {
     <Container className="signup-container">
 <Row>
 <Col>
-<Image src="../public/betterLogo.png" />
+<Image src="/betterLogo.png" />
 </Col>
 <Col>
     

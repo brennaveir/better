@@ -7,6 +7,7 @@ const typeDefs = gql`
     email: String
     password: String
     bits: [Bit]!
+    buddies: [User]
   }
 
   type Bit {
@@ -35,6 +36,7 @@ const typeDefs = gql`
     bits(username: String): [Bit]
     bit(bitId: ID!): Bit
     me: User
+    buddies(username: String): [User]
   }
 
   type Mutation {
@@ -42,6 +44,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addBit(bitText: String!): Bit
     addComment(bitId: ID!, commentText: String!): Bit
+    addBuddy( userId: ID! ): User
     removeBit(bitId: ID!): Bit
     removeComment(bitId: ID!, commentId: ID!): Bit
   }
