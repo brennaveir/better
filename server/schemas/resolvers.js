@@ -27,7 +27,10 @@ const resolvers = {
     },
     buddies: async (parent, args, context) => {
       if (context.user) {
-        return User.find({ _id: context.user._id }).populate('buddies');
+        return User.find({ _id: context.user._id }).populate({
+          path: 'buddies',
+          populate: {path: 'bits'}
+        });
       }
       throw new AuthenticationError('You need to be logged in!');
     },
