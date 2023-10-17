@@ -13,14 +13,14 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 
-import Navigation from './components/Navbar.jsx';
+
 import Feed from './pages/Feed.jsx';
 import Profile from './pages/Profile.jsx';
 import Login from './pages/Login.jsx';
 import SignUp from './pages/SignUp.jsx';
 import Footer from './components/Footer.jsx';
-import Sidebar from './components/Sidebar.jsx'
 import SingleBit from './pages/SingleBit.jsx'
+import Buddies from './pages/Buddies.jsx'
 
 
 const httpLink = createHttpLink({
@@ -77,6 +77,10 @@ function App() {
                   <Route
                     path="/bits/:bitId"
                     element={<SingleBit />}
+                  />
+                  <Route
+                    path="/buddies"
+                    element={<Buddies />}
                   />
                   <Route
                     path='*'

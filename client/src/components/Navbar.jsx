@@ -34,7 +34,7 @@ function Navigation() {
               <Link to="/profile">Inbox</Link>
                </ListGroup.Item>
               <ListGroup.Item>
-              <Link to="/profile">Buddies</Link>
+              <Link to="/buddies">Buddies</Link>
               </ListGroup.Item>
             <ListGroup.Item>
               <Button onClick={logout}>

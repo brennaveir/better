@@ -36,7 +36,7 @@ const typeDefs = gql`
     bits(username: String): [Bit]
     bit(bitId: ID!): Bit
     me: User
-    buddies(username: String): [User]
+    buddies:[User]
   }
 
   type Mutation {

@@ -58,3 +58,14 @@ export const QUERY_ME = gql`
     }
   }
 `;
+
+export const QUERY_BUDDIES = gql`
+query Buddies {
+  buddies {
+    buddies {
+      username
+      _id
+    }
+  }
+}
+`

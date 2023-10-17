@@ -55,6 +55,16 @@ export const ADD_COMMENT = gql`
   }
 `;
 
+export const ADD_BUDDY = gql`
+mutation addBuddy($userId: ID!) {
+  addBuddy(userId: $userId) {
+    buddies {
+      username
+    }
+  }
+}
+`;
+
 export const REMOVE_BIT = gql`
   mutation removeBit($bitId: ID!) {
     removeBit(bitId: $bitId) {
