@@ -10,6 +10,7 @@ import Auth from '../utils/auth'
 import { QUERY_BUDDIES } from '../utils/queries';
 
 const Buddies = () => {
+  console.log("hello")
     const { loading, data } = useQuery(QUERY_BUDDIES);
     console.log(data)
     const buddies = data.buddies[0].buddies || [];

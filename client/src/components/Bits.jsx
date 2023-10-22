@@ -4,7 +4,8 @@ import Card from 'react-bootstrap/Card';
 
 
 
-const Bits = ({ bits, title, showUsername = true, showTitle = true}) => {
+const Bits = ({ bits, username }) => {
+  console.log(bits)
   if (!bits.length) {
     return <h3>No Bits Yet</h3>;
   }
@@ -12,24 +13,20 @@ const Bits = ({ bits, title, showUsername = true, showTitle = true}) => {
 
   return (
    <div>
-   {showTitle && <h3>{title}</h3>}
+   
     {bits &&
     bits.map((bit) => (
     <Card key={bit.id}>
     <Card.Body > 
-     {showUsername ? ( 
+     
 <Card.Title >
   
-        <Link to={`/profiles/${bit.bitAuthor}`}>{bit.bitAuthor}</Link>
+        <Link to={`/profiles/${bit.bitAuthor}`}>{bit.bitAuthor}{username}</Link>
         <Card.Subtitle className="mb-2 text-muted">{bit.createdAt}</Card.Subtitle>
         </Card.Title>
       
-      ) : (
-        <>
-        <Link to={`/profiles/${bit.bitAuthor}`}>You</Link>
-        <Card.Subtitle className="mb-2 text-muted">{bit.createdAt}</Card.Subtitle>
-        </>
-      )}
+      
+      
 <Card.Text>
         {bit.bitText}
       </Card.Text>
