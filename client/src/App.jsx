@@ -21,6 +21,8 @@ import SignUp from './pages/SignUp.jsx';
 import Footer from './components/Footer.jsx';
 import SingleBit from './pages/SingleBit.jsx'
 import Buddies from './pages/Buddies.jsx'
+import Navigation from './components/Navbar.jsx'
+import Sidebar from './components/Sidebar.jsx';
 
 
 const httpLink = createHttpLink({
@@ -50,9 +52,13 @@ function App() {
     <>
       <Container className="bg-info" fluid>
         <Row>
-          <Col className= "m-5">
+       
+          
+            
             <ApolloProvider client={client}>
               <Router>
+                 <Col><Navigation /></Col>
+                 <Col className= "m-5">
                 <Routes className='flex-row justify-flex-center'>
                   <Route
                     path="/"
@@ -94,11 +100,13 @@ function App() {
 
                 
 
-
+</Col>
               </Router>
 
             </ApolloProvider>
-          </Col>
+          
+          
+          <Col><Sidebar /></Col>
         </Row>
       </Container>
       <Footer />
