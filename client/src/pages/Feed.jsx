@@ -23,10 +23,10 @@ const Feed = () => {
 }
 
   return (
-    <Container>
+    <Container className="feed-container">
       <Row>
        <Col><Navigation /></Col>
-       <Col xs={6}>
+       <Col xs={6} className="bits-column">
         <AddBit />
        <Bits
               bits={bits}

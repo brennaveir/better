@@ -377,3 +377,14 @@ END NORMALIZE CSS
 a {
   text-decoration: none;
 }
+
+.feed-container {
+  height: 100%;
+}
+
+.bits-column {
+  overflow-y: auto;
+ overflow-y: scroll;
+ height: 550px;
+}
+
