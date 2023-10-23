@@ -7,8 +7,8 @@ import Col from 'react-bootstrap/Col';
 
 import Bits from '../components/Bits';
 import AddBit from '../components/AddBit';
-// import Sidebar from '../components/Sidebar';
-// import Navigation from '../components/Navbar';
+import Sidebar from '../components/Sidebar';
+import Navigation from '../components/Navbar';
 
 import Auth from '../utils/auth'
 
@@ -25,7 +25,7 @@ const Feed = () => {
   return (
     <Container className="feed-container">
       <Row>
-       {/* <Col><Navigation /></Col> */}
+       <Col><Navigation /></Col>
        <Col xs={6} className="bits-column">
         <AddBit />
        <Bits
@@ -33,7 +33,7 @@ const Feed = () => {
               title="some bits...."
             />
             </Col>
-        {/* <Col><Sidebar /></Col> */}
+        <Col><Sidebar /></Col>
       </Row>
     </Container>
   );

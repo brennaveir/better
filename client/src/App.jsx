@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Outlet, Navigate, BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
@@ -13,7 +13,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 
-
 import Feed from './pages/Feed.jsx';
 import Profile from './pages/Profile.jsx';
 import Login from './pages/Login.jsx';
@@ -21,8 +20,7 @@ import SignUp from './pages/SignUp.jsx';
 import Footer from './components/Footer.jsx';
 import SingleBit from './pages/SingleBit.jsx'
 import Buddies from './pages/Buddies.jsx'
-import Navigation from './components/Navbar.jsx'
-import Sidebar from './components/Sidebar.jsx';
+
 
 
 const httpLink = createHttpLink({
@@ -47,7 +45,9 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-function App() {
+
+
+ function App() {
   return (
     <>
       <Container className="bg-info" fluid>
@@ -57,17 +57,10 @@ function App() {
             
             <ApolloProvider client={client}>
               <Router>
-                 <Col><Navigation /></Col>
+               
                  <Col className= "m-5">
                 <Routes className='flex-row justify-flex-center'>
-                  <Route
-                    path="/"
-                    element={<Feed />}
-                  />
-                  <Route
-                    path="/profile"
-                    element={<Profile />}
-                  />
+                 
                   <Route
                     path="/login"
                     element={<Login />}
@@ -75,6 +68,15 @@ function App() {
                   <Route
                     path="/signup"
                     element={<SignUp />}
+                  />
+                
+                  <Route
+                    path="/"
+                    element={<Feed />}
+                  >
+                  <Route
+                    path="/profile"
+                    element={<Profile />}
                   />
                   <Route
                     path="/profiles/:username"
@@ -92,7 +94,7 @@ function App() {
                     path='*'
                     element={<h1 className="display-2">Wrong page!</h1>}
                   />
-
+</Route>
                 </Routes>
 
 
@@ -106,7 +108,6 @@ function App() {
             </ApolloProvider>
           
           
-          <Col><Sidebar /></Col>
         </Row>
       </Container>
       <Footer />
@@ -114,4 +115,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
