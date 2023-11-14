@@ -378,11 +378,11 @@ a {
   text-decoration: none;
 }
 
-.feed-container {
-  height: 100%;
+.page-container {
+  min-height: 100vh;
 }
 
 .bits-column {
-  overflow-y: auto scroll;
-  height: 550px;
+  overflow-y: scroll;
+  height: 850px;
 }

@@ -50,8 +50,8 @@ const client = new ApolloClient({
  function App() {
   return (
     <>
-      <Container className="bg-info" fluid>
-        <Row>
+      <Container className="page-container bg-info" fluid>
+        <Row className>
        
           
             
